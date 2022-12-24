@@ -1,7 +1,13 @@
 export default function Home() {
     return (
         <div className="container">
-            Hello world
+            <div className="top-bar">
+                Top bar
+            </div>
+            <div className="inner-container">
+                <div className="side-bar">Side bar</div>
+                <div className="main">Main</div>
+            </div>
         </div>
     )
 }
