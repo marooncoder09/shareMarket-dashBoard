@@ -23,6 +23,27 @@ a, a:hover {
     text-decoration: none;
 }
 
+/* @Text */
+.text-center {
+    text-align: center;
+}
+
+.text-small {
+    font-size: small;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
 /* @Flex */
 .flex {
     display: flex;
@@ -40,7 +61,104 @@ a, a:hover {
     flex-wrap: wrap;
 }
 
-/* @Width/Height */
+.flex-1 {
+    flex: 1;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-between {
+    justify-content: space-between;
+}
+
+.jc-evenly {
+    justify-content: space-evenly;
+}
+
+.jc-around {
+    justify-content: space-around;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.ai-start {
+    align-items: flex-start;
+}
+
+.ai-end {
+    align-items: end;
+}
+
+/* @Margin, Padding and Gap */
+.m-0 {
+    margin: 0;
+}
+
+.m-0_5rem {
+    margin: 0.5rem;
+}
+
+.m-1rem {
+    margin: 1rem;
+}
+
+.m-2rem {
+    margin: 2rem;
+}
+
+.m-3rem {
+    margin: 3rem;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.p-0_5rem {
+    padding: 0.5rem;
+}
+
+.p-1rem {
+    padding: 1rem;
+}
+
+.p-2rem {
+    padding: 2rem;
+}
+
+.p-3rem {
+    padding: 3rem;
+}
+
+.g-0 {
+    gap: 0;
+}
+
+.g-0_5rem {
+    gap: 0.5rem;
+}
+
+.g-1rem {
+    gap: 1rem;
+}
+
+.g-2rem {
+    gap: 2rem;
+}
+
+.g-3rem {
+    gap: 3rem;
+}
+
+/* @Width and Height */
 .h-100vh {
     height: 100vh;
+}
+
+.w-100vw {
+    width: 100vw;
 }
