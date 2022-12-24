@@ -6,4 +6,17 @@
 body {
     background-color: var(--bg-color);
     color: var(--color);
+    font-family: sans-serif;
 }
+
+.container-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+}
+
+.top-bar {
+    grid-column: 1 / 3;
+}
+
