@@ -1,6 +1,7 @@
 :root {
-    --bg-color: #f8f8f8;
-    --color: #000000;
+    --bg-color: #050505;
+    --on-bg-color: #0f0f0f;
+    --color: #ffffff;
     --primary-color: #1e0558;
     --on-primary-color: #ffffff;
     --secondary-color: #5b42f3;
@@ -32,7 +33,9 @@ a, a:hover {
 }
 
 .input {
-    border: 1px solid #a3a3a3;
+    border: 1px solid #000000;
+    background-color: var(--bg-color);
+    color: var(--color);
     width: 100%;
     height: 3rem;
     padding: 1rem;
@@ -61,9 +64,14 @@ a, a:hover {
     flex: 1 1 425px;
     max-width: 425px;
     padding: 2rem;
-    background-color: #ffffff;
+    background-color: #0f0f0f;
 }
 
+/* @Alerts and Messages */
+
+.error-message {
+    color: #ff0000;
+}
 
 /* @Button */
 
@@ -95,12 +103,19 @@ a, a:hover {
     color: var(--on-primary-color);
 }
 
-.icon-button:hover {
+.icon-button:hover, .button.has-icon:hover {
     background-color: rgba(0, 0, 0, .3);
 }
 
 .button.is-large {
     height: 3.5rem;
+}
+
+.button.has-icon {
+    gap: .5rem;
+    color: var(--on-primary-color);
+    padding: 1rem;
+    font-weight: bold;
 }
 
 .action-button {
@@ -126,6 +141,10 @@ a, a:hover {
     background-color: transparent;
 }
 
+.nav-link.active {
+    background-color: rgba(0, 0, 0, .3);
+}
+
 /* @Layout */
 
 .container {
@@ -141,7 +160,7 @@ a, a:hover {
 
 .header {
     grid-area: header;
-    background-color: var(--secondary-color);
+    background-color: var(--on-bg-color);
     color: var(--on-secondary-color);
     height: 3rem;
     overflow: hidden;
@@ -187,8 +206,8 @@ a, a:hover {
 
 .dashboard-section {
     flex: 1;
-    background-color: #ffffff;
-    box-shadow: 0 0 .1em .01em #a3a3a3;
+    background-color: var(--on-bg-color);
+    border: 1px solid #151515;
     border-radius: .25rem;
 }
 
@@ -197,14 +216,13 @@ a, a:hover {
 }
 
 .bar {
-    border-bottom: 1px solid #dedede;
+    border-bottom: 1px solid #151515;
     padding: 0.5rem 1rem;
 }
 
 .section-title {
     font-weight: 600;
     font-size: .9rem;
-    color: #131313;
     margin: 0;
 }
 

@@ -5,7 +5,7 @@ export default function LogoutButton() {
     const { logout } = useAuth();
 
     return (
-        <button onClick={logout} className="button icon-button">
+        <button onClick={logout} className="button has-icon">
             <LogoutIcon />
         </button>
     )
