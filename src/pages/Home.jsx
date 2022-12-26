@@ -5,7 +5,8 @@ export default function Home() {
                 Top bar
             </div>
             <div className="side-bar">Side bar</div>
-            <div className="main">Main</div>
+            <div className="main">
+            </div>
         </div>
     )
 }

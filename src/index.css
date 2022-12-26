@@ -23,6 +23,48 @@ a, a:hover {
     text-decoration: none;
 }
 
+/* @Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: .1em;
+}
+
+h1 {
+  font-size: 3.4rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+h6 {
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+
+.title {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
 /* @Text */
 .text-center {
     text-align: center;
@@ -30,6 +72,10 @@ a, a:hover {
 
 .text-small {
     font-size: small;
+}
+
+.text-large {
+    font-size: 1.25rem;
 }
 
 .text-bold {
@@ -40,6 +86,10 @@ a, a:hover {
     color: var(--primary-color);
 }
 
+.text-on-primary {
+    color: var(--on-primary-color);
+}
+
 .text-secondary {
     color: var(--secondary-color);
 }
@@ -47,6 +97,10 @@ a, a:hover {
 /* @Flex */
 .flex {
     display: flex;
+}
+
+.inline-flex {
+    display: inline-flex;
 }
 
 .dir-row {
@@ -63,6 +117,14 @@ a, a:hover {
 
 .flex-1 {
     flex: 1;
+}
+
+.jc-start {
+    justify-content: start;
+}
+
+.jc-end {
+    justify-content: end;
 }
 
 .jc-center {
@@ -159,6 +221,22 @@ a, a:hover {
     height: 100vh;
 }
 
+.h-100pc {
+    height: 100%;
+}
+
 .w-100vw {
     width: 100vw;
+}
+
+.w-100pc {
+    width: 100%;
+}
+
+.w-320px {
+    width: 320px;
+}
+
+.w-425px {
+    width: 425px;
 }
