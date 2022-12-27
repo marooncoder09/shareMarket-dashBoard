@@ -8,7 +8,8 @@ export default function StoreProvider({ children }) {
             currentUser: null,
             token: null,
             pending: true
-        }
+        },
+        selectedStock: null,
     };
 
     return (

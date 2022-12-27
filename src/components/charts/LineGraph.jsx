@@ -2,7 +2,7 @@ import Chart from 'react-apexcharts';
 
 const options = {
     chart: {
-      type: 'candlestick',
+      type: 'line',
       height: 350,
       toolbar: {
           show: true,
@@ -29,12 +29,12 @@ const options = {
     }
 };
 
-export default function CandleStickChart({ series }) {
+export default function LineChart({ series }) {
     return (
         <Chart
             options={options}
             series={series}
-            type="candlestick"
+            type="line"
         />
     )
 }

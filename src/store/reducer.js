@@ -1,4 +1,4 @@
-import { AUTH_USER, LOG_OUT } from "./actions.js";
+import { AUTH_USER, LOG_OUT, SELECT_STOCK } from "./actions.js";
 
 export default function reducer(state, { type, payload }) {
     switch(type) {
@@ -19,7 +19,12 @@ export default function reducer(state, { type, payload }) {
                     token: null,
                     pending: false
                 }
-            }
+            };
+        case SELECT_STOCK:
+            return {
+                ...state,
+                selectedStock: payload
+            };
         default:
             return state;
     }

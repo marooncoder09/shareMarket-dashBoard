@@ -20,21 +20,30 @@ a {
     color: var(--secondary-color);
 }
 
-/* @Text */
+/* @Stock */
 .stock {
-    background: linear-gradient(to right, transparent 50%,  var(--current-trend-color)) var(--on-bg-color);
+    border-left: .2rem solid transparent;
 }
 
-.stock.trend-up {
-    --current-trend-color: rgba(0, 255, 0, .5);
+.stock.selected {
+    border-left: .2rem solid var(--secondary-color);
 }
 
-.stock.trend-down {
-    --current-trend-color: rgba(255, 0, 0, 0.5);
+.stock:hover {
+    background-color: rgba(0, 0, 0, .3);
+    cursor: pointer;
 }
 
 .stock-price {
     font-weight: bold;
+}
+
+.trend-text.trend-up {
+    color: #00ff00;
+}
+
+.trend-text.trend-down {
+    color: var(--danger-color);
 }
 
 /* @Input and Textarea */
