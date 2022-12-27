@@ -1,48 +1,20 @@
 import { useState } from "react";
+import Field from "../../components/form/Field.jsx";
+import Form from "../../components/form/Form.jsx";
 
 const SellTab = () => {
-    const [atPrice, setAtPrice] = useState('');
-    const [amount, setAmount] = useState('');
-    const [total, setTotal] = useState('');
+    const handleSell = () => {
+
+    };
 
     return (
         <div>
-            <div className="form">
-                <div className="field">
-                    <label htmlFor="at-price" className="label">At Price</label>
-                    <input 
-                        onChange={e => setAtPrice(e.target.value)}
-                        className="input" 
-                        type="text" 
-                        name="at-price" 
-                        id="at-price" 
-                        value={atPrice} 
-                    />
-                </div>
-                <div className="field">
-                    <label htmlFor="amount" className="label">Amount</label>
-                    <input 
-                        onChange={e => setAmount(e.target.value)}
-                        className="input" 
-                        type="text" 
-                        name="amount" 
-                        id="amt" 
-                        value={amount} 
-                    />
-                </div>
-                <div className="field">
-                    <label htmlFor="total" className="label">Total</label>
-                    <input 
-                        onChange={e => setTotal(e.target.value)}
-                        className="input" 
-                        type="text" 
-                        name="total" 
-                        id="total" 
-                        value={total} 
-                    />
-                </div>
+            <Form onSubmit={handleSell} className="form">
+                <Field type='number' label="At Price" name='atPrice' />
+                <Field type='number' label="Amount" name='amount' />
+                <Field type='number' label="Total" name='total' />
                 <button className="button is-danger">SELL</button>
-            </div>
+            </Form>
         </div>
     );
 };

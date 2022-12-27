@@ -4,7 +4,10 @@ const BASE_URL = 'https://api.itaxeasy.com';
 
 const AUTH_API_URL = `${BASE_URL}/users/login`;
 
-export async function signIn(email, password) {
+export async function signIn(data) {
+    const email = data.get('email').trim();
+    const password = data.get('password').trim();
+
     if(!email || !password) {
         throw new Error('Email and Password cannot be empty.');
     }

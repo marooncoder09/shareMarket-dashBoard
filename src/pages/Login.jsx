@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import BackButton from "../components/buttons/BackButton.jsx";
+import Field from "../components/form/Field.jsx";
+import Form from "../components/form/Form.jsx";
 import Spinner from "../components/Spinner.jsx";
 import useAuth from "../hooks/use-auth.jsx";
 import { signIn } from "../services/auth.js";
@@ -23,19 +25,12 @@ export default function Login() {
         return <Navigate to="/dashboard" replace />
     } 
 
-    const handleSubmit = async e => {
-        e.preventDefault();
-        
+    const handleSubmit = async (formData) => {
         try {
             setLoggingIn(true);
             setError('');
 
-            const trimmedEmail = email.trim();
-            const trimmedPassword = password.trim();
-
-            const { data, token } = await signIn(trimmedEmail, trimmedPassword);
-
-            console.log(data)
+            const { data, token } = await signIn(formData);
 
             dispatch({
                 type: AUTH_USER,
@@ -56,32 +51,20 @@ export default function Login() {
         <div className="flex h-100vh">
             <div className="flex flex-1 dir-column">
                 <div className="flex-1 flex jc-center ai-center">
-                    <form className="form login-form" onSubmit={handleSubmit}>
+                    <Form className='form login-form' onSubmit={handleSubmit}>
                         <h5 className="w-100pc">Login</h5>
-                        <div className="field">
-                            <label htmlFor="email">Email</label>
-                            <input 
-                                value={email}
-                                onChange={e => setEmail(e.target.value)}
-                                className="input" 
-                                type="email" 
-                                name="email" 
-                                id="email" 
-                                autoComplete="username" 
-                            />
-                        </div>
-                        <div className="field">
-                            <label htmlFor="password">Password</label>
-                            <input 
-                                value={password}
-                                onChange={e => setPassword(e.target.value)}
-                                className="input" 
-                                type="password" 
-                                name="password" 
-                                id="password" 
-                                autoComplete="current-password" 
-                            />
-                        </div>
+                        <Field
+                            type="email"
+                            name="email"
+                            label="Email"
+                            autoComplete="username" 
+                        />
+                        <Field
+                            type="password"
+                            name="password"
+                            label="Password"
+                            autoComplete="current-password" 
+                        />
                         {
                             error
                                 ? (
@@ -107,7 +90,7 @@ export default function Login() {
                                 <Link className="text-bold" to="/sign-up">Sign up</Link>
                             </div>
                         </div>
-                    </form>
+                    </Form>
                 </div>
             </div>
         </div>
