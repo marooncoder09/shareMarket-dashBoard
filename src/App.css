@@ -7,6 +7,9 @@
     --secondary-color: #5b42f3;
     --on-secondary-color: #ffffff;
     --danger-color: #ff0000;
+    --on-danger-color: #ffffff;
+    --success-color: #439743;
+    --on-success-color: #ffffff;
     --box-shadow-color: rgba(200, 200, 200, .5);
 }
 
@@ -114,7 +117,7 @@ a {
     height: 3rem;
     background-color: transparent;
     box-shadow: none;
-    border-radius: 0;
+    border-radius: .25rem;
     font-size: 1rem;
     line-height: 1;
     vertical-align: top;
@@ -147,7 +150,16 @@ a {
 .button.is-primary {
     background-color: var(--secondary-color);
     color: var(--on-secondary-color);
-    border-radius: .25rem;
+}
+
+.button.is-danger {
+    background-color: var(--danger-color);
+    color: var(--on-danger-color);
+}
+
+.button.is-success {
+    background-color: var(--success-color);
+    color: var(--on-success-color);
 }
 
 .action-button {
@@ -236,13 +248,6 @@ a {
     gap: 1rem;
 }
 
-.dashboard-section {
-    flex: 1;
-    background-color: var(--on-bg-color);
-    border: 1px solid #151515;
-    border-radius: .25rem;
-}
-
 .dashboard-sidebar {
     flex: 1 1 320px;
     overflow: hidden;
@@ -256,6 +261,7 @@ a {
 .section {
     border-radius: .25rem;
     background-color: var(--on-bg-color);
+    border: 1px solid #151515;
 }
 
 .section-title {
@@ -276,7 +282,7 @@ a {
     text-align: center;
 }
 
-.tab:not(.active):hover {
+.tab:not(.active) {
     background-color: rgba(0, 0, 0, .3);
 }
 

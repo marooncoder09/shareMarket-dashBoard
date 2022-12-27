@@ -1,9 +1,4 @@
-import { useMemo, useState } from "react"
-
-const TABS = {
-    BUY: 'Buy',
-    SELL: 'Sell'
-};
+import { useState } from "react";
 
 const BuyTab = () => {
     const [atPrice, setAtPrice] = useState('');
@@ -46,42 +41,10 @@ const BuyTab = () => {
                         value={total} 
                     />
                 </div>
-                <button className="button is-primary">BUY</button>
+                <button className="button is-success">BUY</button>
             </div>
         </div>
     );
 };
 
-export default function BuySellSection() {
-    const [currentTab, setCurrentTab] = useState(TABS.BUY);
-
-    const renderTab = useMemo(() => {
-        switch(currentTab) {
-            case TABS.BUY:
-                return <BuyTab />
-            case TABS.SELL:
-                return <div>SELL</div>
-        }
-    }, [currentTab]);
-
-    return (
-        <>
-        <div className="tabs">
-            {
-                [TABS.BUY, TABS.SELL].map(tab => {
-                    return (
-                        <button 
-                            key={tab} 
-                            className={`button tab${currentTab === tab ? ' active' : ''}`}
-                            onClick={() => setCurrentTab(tab)}
-                        >
-                            {tab}
-                        </button>
-                    )
-                })
-            }
-        </div>
-        {renderTab}
-        </>
-    )
-}
+export default BuyTab;

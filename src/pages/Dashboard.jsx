@@ -1,12 +1,14 @@
 import AppHeader from "../components/AppHeader.jsx";
 import useAuth from "../hooks/use-auth.jsx"
 
-import BuySellSection from "../sections/BuySellSection.jsx";
+import BuySellSection from "../sections/BuySellSection";
 import MyStocks from "../sections/MyStocks.jsx";
 import LineChart from "../components/charts/LineGraph.jsx";
 import { useContext } from "react";
 import { StoreContext } from "../store/store-context.js";
 import SelectedStock from "../sections/SelectedStock.jsx";
+
+import { chart } from "../shared/data.js";
 
 export default function Dashboard() {
     const { currentUser } = useAuth();
@@ -26,10 +28,11 @@ export default function Dashboard() {
                 <div className="dashboard">
                     <div className="dashboard-sections">
                         <SelectedStock />
-                        <div className="section dashboard-section">
+                        <div className="section flex-1">
                             <div className="bar">
                                 <h6 className="section-title">Section 1</h6>
                                 <div>
+                                  <LineChart series={chart.series} />
                                 </div>
                             </div>
                         </div>
