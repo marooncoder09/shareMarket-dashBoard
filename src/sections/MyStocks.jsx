@@ -5,21 +5,21 @@ import { StoreContext } from "../store/store-context.js";
 
 const stocks = [
     {
-        id: 'TATAMOTORS',
-        name: 'Tata Motors',
+        id: 'IBM',
+        name: 'IBM',
         purchasePrice: 100,
         currentPrice: 110,
         trend: 'up',
         holding: 5
     },
     {
-        id: 'PAYTM',
-        name: 'PayTM',
+        id: 'FB',
+        name: 'FACEBOOK',
         purchasePrice: 100,
-        currentPrice: 10,
-        trend: 'down',
+        currentPrice: 110,
+        trend: 'up',
         holding: 5
-    },
+    }
 ];
 
 export default function MyStocks() {

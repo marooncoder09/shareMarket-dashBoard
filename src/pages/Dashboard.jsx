@@ -32,7 +32,6 @@ export default function Dashboard() {
                             <div className="bar">
                                 <h6 className="section-title">Section 1</h6>
                                 <div>
-                                  <LineChart series={chart.series} />
                                 </div>
                             </div>
                         </div>
